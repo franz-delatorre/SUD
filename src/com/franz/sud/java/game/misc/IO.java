@@ -51,7 +51,7 @@ public final class IO {
 
     public static void printFightersHealth(GameUnit hero, GameUnit enemy) {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         System.out.println();
         System.out.println(hero.getName() + " \t\t\t\t"+ enemy.getName());
         System.out.print(hero.getCurrentHealth() + "/" + hero.getMaxHealth());
@@ -60,37 +60,37 @@ public final class IO {
 
     public static void printAttack(Unit unit) {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         System.out.println(ANSI_RESET + unit.getName() + " used normal attack." + ANSI_BLACK);
     }
 
     public static void printSkillName(String userName, String skillName) {
         System.out.println();
-//        //sleep(1);
+//        sleep(1);
         System.out.println(ANSI_PURPLE + userName + " used " + ANSI_RED + skillName + ANSI_BLACK);
     }
 
     public static void printCrit() {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         System.out.println(ANSI_PURPLE + "Critical HIT" + ANSI_BLACK);
     }
 
     public static void printEvade(Unit unit) {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         System.out.println(ANSI_PURPLE + unit.getName() + " evaded the attack" + ANSI_BLACK);
     }
 
     public static void printLifesteal(int ls) {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         System.out.println(ANSI_PURPLE + ls + " lifesteal" + ANSI_BLACK);
     }
 
     public static void printDamage(int damage) {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         System.out.println(ANSI_RED + damage + " damage" + ANSI_BLACK);
     }
 
@@ -99,7 +99,7 @@ public final class IO {
         for (StatType statType : StatType.values()) {
             Stats s = stats.getStat(statType);
             if (s.getStatValue() > 0) {
-                //sleep(1);
+                sleep(1);
                 System.out.println(ANSI_BLUE + "+ " + s.getStatValue() + statType.toString() + ANSI_BLACK);
             }
         }
@@ -107,7 +107,7 @@ public final class IO {
 
     public static void printWinner(Unit hero, Unit enemy) {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         if (hero.getHealth().getCurrentHealth() > 0) {
             System.out.println(ANSI_GREEN + "You have slain " + enemy.getName() + ANSI_BLACK);
             return;
@@ -118,7 +118,7 @@ public final class IO {
 
     public static void printHeal(int heal) {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         System.out.println(ANSI_GREEN + "+ " + heal + " health" + ANSI_BLACK);
     }
 
@@ -133,7 +133,7 @@ public final class IO {
     public static <T extends AttributedItem> void showInventory(ArrayList<T> items) {
         int index = 1;
         System.out.println();
-        //sleep(1);
+        sleep(1);
         if (items.get(0) instanceof ConsumableItem) System.out.println("Name\t\t\tAmount:");
         for (Item item : items) {
             if (item instanceof ConsumableItem) {
@@ -148,7 +148,7 @@ public final class IO {
 
     public static int getItemIndex(int index) {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         System.out.println("Please select an item number: ");
         Scanner s = new Scanner(System.in);
 
@@ -156,7 +156,7 @@ public final class IO {
         int opt = s.nextInt();
         if (opt < 1 && opt > index) {
             System.out.println();
-            //sleep(1);
+            sleep(1);
             System.out.println(ANSI_RED + "Index is out of bounds." + ANSI_BLACK);
             getItemIndex(index);
         }
@@ -165,19 +165,19 @@ public final class IO {
 
     public static void showItemAttributes(AttributedItem item) {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         System.out.println(ANSI_CYAN + item.getName() + ANSI_BLACK);
         printItemAttributes(item);
     }
 
     public static void printItemAttributes(AttributedItem item) {
-        //sleep(1);
+        sleep(1);
         if (item.getDamage() > 0) {
-            //sleep(1);
+            sleep(1);
             System.out.println(ANSI_GREEN + "+ " + item.getDamage() + " Damage" + ANSI_BLACK);
         }
         if (item.getHealth() > 0) {
-            //sleep(1);
+            sleep(1);
             System.out.println(ANSI_GREEN + "+ " + item.getHealth() + " Health" + ANSI_BLACK);
         }
 
@@ -185,7 +185,7 @@ public final class IO {
         for (StatType statType : StatType.values()) {
             Stats s = stats.getStat(statType);
             if (s.getStatValue() > 0) {
-                //sleep(1);
+                sleep(1);
                 System.out.println(ANSI_GREEN + "+ " + s.getStatValue() + " " + s.getName() + ANSI_BLACK);
             }
         }
@@ -198,7 +198,7 @@ public final class IO {
         System.out.println("You found an item, pick it up?");
         do {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         System.out.println("[Y] Yes");
         System.out.println("[N] No");
 
@@ -217,7 +217,7 @@ public final class IO {
 
     public static void showCharacter(Hero hero) {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         System.out.println(hero.getName());
         System.out.println(ANSI_RESET + "Skill:" + hero.getSkill().getName());
         System.out.println("Health: " + hero.getMaxHealth());
@@ -232,14 +232,14 @@ public final class IO {
 
     public static void itemAlreadyEquipped() {
         System.out.println();
-        //sleep(1);
+        sleep(1);
         System.out.println(ANSI_RED + "Item is already equipped!" + ANSI_BLACK);
     }
 
     public static void printNarrative(String[] strings) {
         System.out.println();
         for (String string : strings) {
-            //sleep(2);
+            sleep(2);
             System.out.println(ANSI_BLUE + string + ANSI_BLACK);
         }
     }
