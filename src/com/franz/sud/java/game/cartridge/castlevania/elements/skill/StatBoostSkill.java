@@ -4,7 +4,7 @@ import com.franz.sud.java.game.cartridge.castlevania.elements.stats.GameStats;
 import com.franz.sud.java.game.cartridge.castlevania.elements.stats.StatType;
 import com.franz.sud.java.game.cartridge.castlevania.elements.unit.GameUnit;
 import com.franz.sud.java.game.cartridge.castlevania.helper.StatHelper;
-import com.franz.sud.java.game.misc.IO;
+import com.franz.sud.java.game.cartridge.castlevania.IO;
 import com.franz.sud.java.game.platform.components.Skill;
 
 public class StatBoostSkill extends Skill {

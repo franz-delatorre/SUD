@@ -2,7 +2,7 @@ package com.franz.sud.java.game.cartridge.castlevania.elements.unit;
 
 import com.franz.sud.java.game.platform.components.Skill;
 
-public class SkilledEnemy extends Enemy implements UseSkill{
+public class SkilledEnemy extends Enemy implements Skillable {
     private Skill skill;
 
     public static class Builder extends GameUnit.Builder<Builder> {

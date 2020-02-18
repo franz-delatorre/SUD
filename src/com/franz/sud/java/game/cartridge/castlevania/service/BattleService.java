@@ -4,9 +4,8 @@ import com.franz.sud.java.game.cartridge.castlevania.elements.skill.StatBoostSki
 import com.franz.sud.java.game.cartridge.castlevania.elements.stats.LifeSteal;
 import com.franz.sud.java.game.cartridge.castlevania.elements.stats.StatType;
 import com.franz.sud.java.game.cartridge.castlevania.elements.unit.*;
-import com.franz.sud.java.game.misc.IO;
+import com.franz.sud.java.game.cartridge.castlevania.IO;
 import com.franz.sud.java.game.platform.components.Skill;
-import com.franz.sud.java.game.platform.components.Stats;
 
 import java.util.HashMap;
 
@@ -14,9 +13,6 @@ public class BattleService {
     private static HashMap<String, String> input = new HashMap<>();
     private Hero hero;
     private Enemy enemy;
-
-    public BattleService() {
-    }
 
     public void setHero(Hero hero) {
         this.hero = hero;
@@ -66,8 +62,8 @@ public class BattleService {
      * on cooldown. If the enemy does not have a skill it will only do a normal attack.
      */
     private void enemyAI() {
-        if (enemy instanceof UseSkill) {
-            UseSkill ee = (UseSkill) enemy;
+        if (enemy instanceof Skillable) {
+            Skillable ee = (Skillable) enemy;
             if (!ee.skillOnCooldown()) {
                 useSkill(ee, hero);
                 return;
@@ -104,7 +100,7 @@ public class BattleService {
      * @param user
      * @param victim
      */
-    private void useSkill(UseSkill user, GameUnit victim) {
+    private void useSkill(Skillable user, GameUnit victim) {
         IO.printSkillName(user.getUserName(), user.getSkillName());
         user.useSkill(victim);
         user.setCooldown(4);

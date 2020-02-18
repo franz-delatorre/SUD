@@ -1,6 +1,6 @@
 package com.franz.sud.java.game.cartridge.castlevania.elements.unit;
 
-public interface UseSkill {
+public interface Skillable {
     void useSkill(GameUnit victim);
     boolean skillOnCooldown();
     void setCooldown(int cd);

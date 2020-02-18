@@ -14,7 +14,6 @@ import com.franz.sud.java.game.cartridge.castlevania.service.InventoryService;
 import com.franz.sud.java.game.cartridge.castlevania.service.MapService;
 import com.franz.sud.java.game.cartridge.castlevania.service.RoomService;
 import com.franz.sud.java.game.misc.Direction;
-import com.franz.sud.java.game.misc.IO;
 import com.franz.sud.java.game.platform.components.Point;
 import com.franz.sud.java.game.platform.components.Room;
 
@@ -24,6 +23,7 @@ public class Castlevania implements Cartridge {
     private final static HashMap<String, String> input = new HashMap<>();
     private final static int MAP_CHANGE = 3;
     private final Random rand = new Random();
+    private final String name = "Castlevania";
 
     private boolean gameOver;
     private Enemy finalBoss;
@@ -34,12 +34,10 @@ public class Castlevania implements Cartridge {
     private InventoryService inventoryService = new InventoryService();
     private MapService mapService = new MapService();
     private GameProgress progress = new GameProgress();
-    private String name;
     private EnumMap<ConsumableItemTier, ArrayList<ConsumableItem>> consumables = new EnumMap<>(ConsumableItemTier.class);
     private Map<Room, Narrative> narrativeList = new HashMap<>();
 
     public Castlevania() {
-        name = "Castlevania";
         gameOver = false;
     }
 
@@ -60,7 +58,6 @@ public class Castlevania implements Cartridge {
     @Override
     public void start() {
         while (!gameOver) {
-            if (!finalBoss.isAlive()) gameOver = true;
             mainMenu();
         }
     }
@@ -86,6 +83,10 @@ public class Castlevania implements Cartridge {
      * Opens the main menu of the game
      */
     private void mainMenu() {
+        if (!finalBoss.isAlive()) {
+            gameOver = true;
+            return;
+        }
         input.clear();
         getNarrative(0);
         input.put("q", "Quit");
@@ -116,10 +117,7 @@ public class Castlevania implements Cartridge {
             stillInMapMenu = mapService.mapMenu();
             getNarrative(0);
             checkRoomForEnemy();
-            if (!finalBoss.isAlive()) {
-                gameOver = true;
-                return;
-            }
+            if (!finalBoss.isAlive()) return;
             checkRoomForItem();
             getNarrative(1);
             checkProgress();

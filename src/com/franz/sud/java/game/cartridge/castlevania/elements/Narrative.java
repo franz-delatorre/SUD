@@ -6,9 +6,6 @@ public class Narrative {
     private ArrayList<String[]> narrative = new ArrayList<>();
     private boolean isNarrated = false;
 
-    public Narrative() {
-    }
-
     public void addNarrative(String[] s) {
         narrative.add(s);
     }

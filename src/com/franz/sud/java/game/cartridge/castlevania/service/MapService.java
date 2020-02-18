@@ -2,7 +2,7 @@ package com.franz.sud.java.game.cartridge.castlevania.service;
 
 import com.franz.sud.java.game.cartridge.castlevania.elements.GameMap;
 import com.franz.sud.java.game.misc.Direction;
-import com.franz.sud.java.game.misc.IO;
+import com.franz.sud.java.game.cartridge.castlevania.IO;
 import com.franz.sud.java.game.platform.components.Room;
 
 import java.util.ArrayList;
@@ -10,9 +10,6 @@ import java.util.HashMap;
 
 public class MapService {
     private GameMap map;
-
-    public MapService() {
-    }
 
     public void setMap(GameMap map) {
         this.map = map;

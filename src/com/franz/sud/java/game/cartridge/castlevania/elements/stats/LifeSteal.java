@@ -1,6 +1,6 @@
 package com.franz.sud.java.game.cartridge.castlevania.elements.stats;
 
-import com.franz.sud.java.game.misc.IO;
+import com.franz.sud.java.game.cartridge.castlevania.IO;
 import com.franz.sud.java.game.platform.components.Health;
 import com.franz.sud.java.game.platform.components.Stats;
 

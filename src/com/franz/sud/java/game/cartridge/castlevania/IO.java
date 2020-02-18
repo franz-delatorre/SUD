@@ -1,4 +1,4 @@
-package com.franz.sud.java.game.misc;
+package com.franz.sud.java.game.cartridge.castlevania;
 
 import com.franz.sud.java.game.cartridge.castlevania.elements.item.AttributedItem;
 import com.franz.sud.java.game.cartridge.castlevania.elements.item.ConsumableItem;
@@ -9,7 +9,7 @@ import com.franz.sud.java.game.cartridge.castlevania.elements.stats.StatType;
 import com.franz.sud.java.game.cartridge.castlevania.elements.unit.GameUnit;
 import com.franz.sud.java.game.cartridge.castlevania.elements.unit.Hero;
 import com.franz.sud.java.game.cartridge.castlevania.elements.unit.SkilledEnemy;
-import com.franz.sud.java.game.cartridge.castlevania.elements.unit.UseSkill;
+import com.franz.sud.java.game.cartridge.castlevania.elements.unit.Skillable;
 import com.franz.sud.java.game.platform.components.Item;
 import com.franz.sud.java.game.platform.components.Skill;
 import com.franz.sud.java.game.platform.components.Stats;
@@ -124,7 +124,7 @@ public final class IO {
 
     public static void printSkillCooldown(Skill skill, GameUnit enemy) {
         System.out.print("Cd: " + skill.getCooldown() + " \t\t\t\t\t");
-        if (enemy instanceof UseSkill) {
+        if (enemy instanceof Skillable) {
             System.out.print("Cd: " + ((SkilledEnemy) enemy).getSkill().getCooldown());
         }
         System.out.println();

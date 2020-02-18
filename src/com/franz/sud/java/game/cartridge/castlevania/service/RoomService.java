@@ -2,9 +2,7 @@ package com.franz.sud.java.game.cartridge.castlevania.service;
 
 import com.franz.sud.java.game.cartridge.castlevania.elements.item.AttributedItem;
 import com.franz.sud.java.game.cartridge.castlevania.elements.unit.Enemy;
-import com.franz.sud.java.game.platform.components.Item;
 import com.franz.sud.java.game.platform.components.Room;
-import org.w3c.dom.Attr;
 
 import java.util.HashMap;
 import java.util.Map;

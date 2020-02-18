@@ -5,12 +5,12 @@ import com.franz.sud.java.game.cartridge.castlevania.elements.item.ConsumableIte
 import com.franz.sud.java.game.cartridge.castlevania.elements.item.EquipmentType;
 import com.franz.sud.java.game.cartridge.castlevania.elements.item.EquippableItem;
 import com.franz.sud.java.game.cartridge.castlevania.helper.StatHelper;
-import com.franz.sud.java.game.misc.IO;
+import com.franz.sud.java.game.cartridge.castlevania.IO;
 import com.franz.sud.java.game.platform.components.Skill;
 
 import java.util.HashMap;
 
-public class Hero extends GameUnit implements UseSkill{
+public class Hero extends GameUnit implements Skillable {
     private Skill skill;
     private HashMap<EquipmentType, EquippableItem> equippedItem = new HashMap<>();
 

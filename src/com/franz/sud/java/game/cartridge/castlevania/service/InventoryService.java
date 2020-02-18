@@ -5,7 +5,7 @@ import com.franz.sud.java.game.cartridge.castlevania.elements.item.ConsumableIte
 import com.franz.sud.java.game.cartridge.castlevania.elements.item.EquipmentType;
 import com.franz.sud.java.game.cartridge.castlevania.elements.item.EquippableItem;
 import com.franz.sud.java.game.cartridge.castlevania.elements.unit.Hero;
-import com.franz.sud.java.game.misc.IO;
+import com.franz.sud.java.game.cartridge.castlevania.IO;
 
 import java.util.ArrayList;
 import java.util.EnumMap;
@@ -19,9 +19,6 @@ public class InventoryService {
     private ArrayList<EquippableItem> equippables = new ArrayList<>();
     private EnumMap<EquipmentType, EquippableItem> equippedItem = new EnumMap<>(EquipmentType.class);
     private Hero hero;
-
-    public InventoryService() {
-    }
 
     public void setHero(Hero hero) {
         this.hero = hero;
