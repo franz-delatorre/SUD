@@ -1,6 +1,6 @@
 package com.franz.sud.java.game.platform;
 
-import com.franz.sud.java.game.cartridge.Cartridge;
+import com.franz.sud.java.game.platform.cartridge.Cartridge;
 
 public class GameManager {
     private Cartridge game;

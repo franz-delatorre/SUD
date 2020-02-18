@@ -1,6 +1,6 @@
 package com.franz.sud.java.game.platform.components;
 
-import com.franz.sud.java.game.cartridge.castlevania.elements.unit.GameUnit;
+import com.franz.sud.java.game.platform.cartridge.castlevania.elements.unit.GameUnit;
 
 public abstract class Skill {
     protected String name;

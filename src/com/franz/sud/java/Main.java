@@ -1,6 +1,6 @@
 package com.franz.sud.java;
 
-import com.franz.sud.java.game.cartridge.castlevania.Castlevania;
+import com.franz.sud.java.game.platform.cartridge.castlevania.Castlevania;
 import com.franz.sud.java.game.platform.GameManager;
 
 public class Main {
