@@ -1,15 +1,18 @@
 package com.franz.sud.java;
 
-import com.franz.sud.java.game.platform.cartridge.castlevania.Castlevania;
-import com.franz.sud.java.game.platform.GameManager;
+import com.franz.sud.java.game.cartridge.castlevania.Castlevania;
+import com.franz.sud.java.game.platform.dungeon_crawler.DCManager;
+import com.franz.sud.java.game.platform.dungeon_crawler.DungeonCrawler;
 
 public class Main {
 
     public static void main(String[] args) {
-        Castlevania castlevania = new Castlevania();
-        GameManager gm = new GameManager();
+        DungeonCrawler castlevania = new Castlevania();
+        DCManager dcManager = new DCManager();
 
-        gm.setGame(castlevania);
-        gm.startGame();
+        dcManager.setGame(castlevania);
+        dcManager.startGame();
     }
 }
+
+
