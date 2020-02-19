@@ -1,7 +1,7 @@
 package com.franz.java;
 
 import com.franz.java.game.GameManager;
-import com.franz.java.game.cartridge.rainbowsix.RaindbowSix;
+import com.franz.java.game.cartridge.rainbowsix.RainbowSix;
 import com.franz.java.game.platform.racing.Raceable;
 import com.franz.java.game.platform.racing.RacingManager;
 import com.franz.java.game.Cartridge;
@@ -20,10 +20,9 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<DungeonCrawler> dc = new ArrayList<>();
         ArrayList<Raceable> rc = new ArrayList<>();
-        ArrayList<GameManager> gm = new ArrayList<>();
 
         dc.add(new Castlevania());
-        dc.add(new RaindbowSix());
+        dc.add(new RainbowSix());
         rc.add(new NeedForSpeed());
 
         boolean exitLoop = false;
@@ -33,40 +32,14 @@ public class Main {
             System.out.println("[R] Racing");
             System.out.println("[D] Dungeon Crawler");
             Scanner sc = new Scanner(System.in);
+
             while (!sc.hasNextLine());
-            boolean inLoop;
             switch (sc.nextLine().toLowerCase()) {
                 case "r":
-                    inLoop = true;
-                    do {
-                        switch (getUserInput()) {
-                            case "s":
-                                racingManager.setGame(selectGame(rc));
-                                break;
-                            case "g":
-                                racingManager.startGame();
-                                break;
-                            case "e":
-                                inLoop = false;
-                                break;
-                        }
-                    } while (inLoop);
+                    platformMenu(racingManager, rc);
                     break;
                 case "d":
-                    inLoop = true;
-                    do {
-                        switch (getUserInput()) {
-                            case "s":
-                                dcManager.setGame(selectGame(dc));
-                                break;
-                            case "g":
-                                dcManager.startGame();
-                                break;
-                            case "e":
-                                inLoop = false;
-                                break;
-                        }
-                    } while (inLoop);
+                    platformMenu(dcManager, dc);
                     break;
                 case "q":
                     exitLoop = true;
@@ -77,7 +50,25 @@ public class Main {
         } while (!exitLoop);
     }
 
-    public static <T extends Cartridge> T selectGame(ArrayList<T> items){
+    private static <T extends Cartridge>void platformMenu(GameManager manager, ArrayList<T> list) {
+        boolean inLoop = true;
+        do {
+            switch (getUserInput()) {
+                case "s":
+                    manager.setGame(selectGame(list));
+                    break;
+                case "g":
+                    manager.startGame();
+                    break;
+                case "e":
+                    inLoop = false;
+                    break;
+            }
+        } while (inLoop);
+
+    }
+
+    private static <T extends Cartridge> T selectGame(ArrayList<T> items){
         T game = null;
         int index = 1;
         for (T cartridge : items) {
@@ -101,7 +92,7 @@ public class Main {
         return game;
     }
 
-    public static String getUserInput() {
+    private static String getUserInput() {
         Scanner sc = new Scanner(System.in);
         boolean inLoop = true;
         String z = null;

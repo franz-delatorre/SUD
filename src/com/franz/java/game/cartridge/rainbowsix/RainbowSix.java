@@ -2,7 +2,7 @@ package com.franz.java.game.cartridge.rainbowsix;
 
 import com.franz.java.game.platform.dungeoncrawler.DungeonCrawler;
 
-public class RaindbowSix implements DungeonCrawler {
+public class RainbowSix implements DungeonCrawler {
     private final String name = "Rainbow Six";
 
     @Override
