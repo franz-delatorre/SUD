@@ -1,4 +1,4 @@
-package com.franz.java.game.cartridge;
+package com.franz.java.game.cartridge.rainbowsix;
 
 import com.franz.java.game.platform.dungeoncrawler.DungeonCrawler;
 

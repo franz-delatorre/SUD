@@ -1,7 +1,7 @@
 package com.franz.java;
 
 import com.franz.java.game.GameManager;
-import com.franz.java.game.cartridge.RaindbowSix;
+import com.franz.java.game.cartridge.rainbowsix.RaindbowSix;
 import com.franz.java.game.platform.racing.Raceable;
 import com.franz.java.game.platform.racing.RacingManager;
 import com.franz.java.game.Cartridge;
