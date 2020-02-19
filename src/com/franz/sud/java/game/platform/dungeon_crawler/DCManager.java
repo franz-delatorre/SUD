@@ -2,6 +2,7 @@ package com.franz.sud.java.game.platform.dungeon_crawler;
 
 import com.franz.sud.java.game.Cartridge;
 import com.franz.sud.java.game.GameManager;
+import com.franz.sud.java.game.cartridge.castlevania.DungeonCrawler;
 
 public class DCManager implements GameManager {
     private DungeonCrawler game;

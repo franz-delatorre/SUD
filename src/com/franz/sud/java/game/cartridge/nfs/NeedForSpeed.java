@@ -1,8 +1,7 @@
-package com.franz.sud.java.game.platform.racing.components;
+package com.franz.sud.java.game.cartridge.nfs;
 
-import com.franz.sud.java.game.platform.racing.Raceable;
+public class NeedForSpeed implements Raceable{
 
-public class RacingManager implements Raceable {
     @Override
     public boolean reachedFinishLine() {
         return false;

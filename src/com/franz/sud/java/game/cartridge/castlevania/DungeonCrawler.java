@@ -1,4 +1,4 @@
-package com.franz.sud.java.game.platform.dungeon_crawler;
+package com.franz.sud.java.game.cartridge.castlevania;
 
 import com.franz.sud.java.game.Cartridge;
 

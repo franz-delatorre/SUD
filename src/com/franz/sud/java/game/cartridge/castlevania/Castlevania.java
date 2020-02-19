@@ -14,7 +14,6 @@ import com.franz.sud.java.game.cartridge.castlevania.service.InventoryService;
 import com.franz.sud.java.game.cartridge.castlevania.service.MapService;
 import com.franz.sud.java.game.cartridge.castlevania.service.RoomService;
 import com.franz.sud.java.game.platform.dungeon_crawler.components.Direction;
-import com.franz.sud.java.game.platform.dungeon_crawler.DungeonCrawler;
 import com.franz.sud.java.game.platform.dungeon_crawler.components.Point;
 import com.franz.sud.java.game.platform.dungeon_crawler.components.Room;
 

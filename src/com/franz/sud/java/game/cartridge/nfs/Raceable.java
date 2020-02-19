@@ -1,4 +1,4 @@
-package com.franz.sud.java.game.platform.racing;
+package com.franz.sud.java.game.cartridge.nfs;
 
 import com.franz.sud.java.game.Cartridge;
 
